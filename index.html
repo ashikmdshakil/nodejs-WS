@@ -1,0 +1,15 @@
+<html>
+    <head>Web socket</head>
+    <body>
+        <h1>We are here practising WebSocket.</h1>
+        <script>
+            var socket = new WebSocket("ws://127.0.0.1:5001");
+            socket.onopen = (event)=>{
+                alert("Client is connected to the server");
+            }
+            socket.onmessage = (event)=>{
+                console.log(event.data);
+            }
+        </script>
+    </body>
+</html>
